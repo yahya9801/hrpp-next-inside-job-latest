@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",                           // Modern JS target
+    "lib": ["dom", "dom.iterable", "esnext"],    // Include DOM & ESNext features
+    "allowJs": true,                             // Allow JavaScript files
+    "skipLibCheck": true,                         // Skip checking .d.ts files
+    "strict": false,                              // You can enable later with true for better TS safety
+    "noEmit": true,                               // Don't emit output, Next.js handles this
+    "esModuleInterop": true,                      // Enable default import interop
+    "module": "esnext",                           // Module system
+    "moduleResolution": "node",                   // Standard module resolution
+    "resolveJsonModule": true,                    // Allow importing JSON files
+    "isolatedModules": true,                       // Each file is treated as a module
+    "jsx": "preserve",                            // JSX handled by Next.js
+    "incremental": true,                          // Faster builds with incremental compilation
+    "plugins": [
+      { "name": "next" }
+    ],
+    "paths": {
+      "@/*": ["./*"]                              // Path alias for imports
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "global.d.ts"                                 // Your global types file
+  ],
+  "exclude": ["node_modules"]
+}

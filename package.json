@@ -1,0 +1,35 @@
+{
+  "name": "hrrp-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "cross-env NEXT_DISABLE_TYPE_CHECKING=true next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "axios": "^1.10.0",
+    "dayjs": "^1.11.13",
+    "litepicker": "^2.0.12",
+    "lucide-react": "^0.525.0",
+    "next": "^15.3.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5"
+  }
+}
