@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { IconType } from "react-icons";
+import { FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import ShareButton from "@/components/ShareButton";
 import JobImageSlider from "@/components/JobImageSlider";
 import AdUnit from "@/components/AdUnit";
@@ -14,7 +16,7 @@ export const revalidate = 60;
 
 async function getJob(slug: string) {
   const res = await fetch(
-    `https://admin.hrpostingpartner.com/api/jobs/${slug}`,
+    `http://localhost:8000/api/jobs/${slug}`,
     {
       next: { revalidate: 60 },
     }
@@ -124,6 +126,19 @@ type SliderSectionConfig = {
   seeMoreLabel?: string;
 };
 
+type PlatformLink = {
+  label: string;
+  href: string;
+};
+
+type PlatformGroup = {
+  title: string;
+  icon: IconType;
+  accent: string;
+  buttonClassName: string;
+  links: PlatformLink[];
+};
+
 async function fetchJobsForSlider({
   limit = 5,
   locations,
@@ -230,6 +245,50 @@ export default async function Page({
         .map((company: any) => company?.name || company?.text)
         .filter(Boolean)
     : [];
+  const platformGroups: PlatformGroup[] = [
+    {
+      title: "Jobs WhatsApp Channels",
+      icon: FaWhatsapp,
+      accent: "Follow",
+      buttonClassName:
+        "border-[#1faa59] bg-gradient-to-r from-[#31d36c] to-[#22b45b] text-white shadow-[0_10px_20px_rgba(34,180,91,0.25)] hover:from-[#2ac563] hover:to-[#1ea651]",
+      links: [
+        { label: "Main", href: "https://whatsapp.com/channel/0029VaRWeF7DDmFRZuX0Ww0K" },
+        { label: "Continuous", href: "https://whatsapp.com/channel/0029VbAxrB572WTxgZBSbp1I" },
+        { label: "Karachi", href: "https://whatsapp.com/channel/0029Vb22YxqC1Fu2UDptEa0G" },
+        { label: "Lahore", href: "https://whatsapp.com/channel/0029VaxHhoaCsU9UVSa5UZ0i" },
+        { label: "Islamabad", href: "https://whatsapp.com/channel/0029Vb2Md2WAe5VjPJYi2g0Y" },
+        { label: "Rawalpindi", href: "https://whatsapp.com/channel/0029Vb2Md2WAe5VjPJYi2g0Y" },
+        { label: "Faisalabad", href: "https://whatsapp.com/channel/0029Vay4uuK0QealX8zNg30Q" },
+        { label: "Remote", href: "https://whatsapp.com/channel/0029Vb3lANuG8l5L2TxX001s" },
+        { label: "Freshers", href: "https://whatsapp.com/channel/0029Vb43BKJ8fewx69E56x3O" },
+      ],
+    },
+    {
+      title: "LinkedIn Company Pages",
+      icon: FaLinkedin,
+      accent: "Follow",
+      buttonClassName:
+        "border-[#0A66C2] bg-gradient-to-r from-[#2287e5] to-[#0A66C2] text-white shadow-[0_10px_20px_rgba(10,102,194,0.25)] hover:from-[#1d7cd4] hover:to-[#095cad]",
+      links: [
+        { label: "Main", href: "https://www.linkedin.com/company/hr-posting-partner/" },
+        { label: "Job Ads", href: "https://www.linkedin.com/company/hr-posting-partner/" },
+      ],
+    },
+    {
+      title: "YouTube Channel",
+      icon: FaYoutube,
+      accent: "Subscribe",
+      buttonClassName:
+        "border-[#d92929] bg-gradient-to-r from-[#ff5a5a] to-[#ff3030] text-white shadow-[0_10px_20px_rgba(255,48,48,0.25)] hover:from-[#f34f4f] hover:to-[#f12626]",
+      links: [
+        {
+          label: "Main",
+          href: "https://youtube.com/playlist?list=PLG4_jlkQNY3c4e18HVMezltMtlgbk3_ty",
+        },
+      ],
+    },
+  ];
   const sliderConfigs: SliderSectionConfig[] = [
     {
       key: "latest-pk",
@@ -543,25 +602,8 @@ export default async function Page({
       </li>
     </ol>
 
-    {/* Video Guide Section */}
     <div className="mt-6">
       <p className="font-semibold text-gray-900">For more guidance</p>
-      {/* <p className="mt-1">
-        Watch our step-by-step video guide on how to use our website.
-      </p> */}
-
-      {/* Responsive YouTube Embed */}
-      {/* <div className="mt-3 aspect-video w-full overflow-hidden rounded-xl border">
-        <iframe
-          className="h-full w-full"
-          src="https://www.youtube.com/embed/videoseries?list=PLG4_jlkQNY3c4e18HVMezltMtlgbk3_ty"
-          title="How to use Our Website"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div> */}
-
       <div className="mt-3 aspect-video w-full overflow-hidden rounded-xl border">
         <iframe
           className="h-full w-full"
@@ -573,67 +615,70 @@ export default async function Page({
           allowFullScreen
         />
       </div>
-
-
-
-      {/* Optional clickable link */}
-      
     </div>
   </div>
 </div>
 
 
-      <div className="rounded-3xl border border-gray-100 bg-white p-6 text-gray-700 shadow-[0_25px_60px_rgba(15,23,42,0.12)] break-words space-y-3">
-        <p className="text-base font-semibold text-gray-900">Follow other platforms for jobs</p>
-        <div className="space-y-2 text-sm">
-          <p>
-            <span className="font-medium">Main WhatsApp Channel:</span>
-            <br />
-            <a
-              href="https://whatsapp.com/channel/0029VaRWeF7DDmFRZuX0Ww0K"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800 break-all"
-            >
-              https://whatsapp.com/channel/0029VaRWeF7DDmFRZuX0Ww0K
-            </a>
-          </p>
-          <p>
-            <span className="font-medium">Continuous Individual Job Ads → HRPP 2.0 WAC:</span>
-            <br />
-            <a
-              href="https://whatsapp.com/channel/0029VbAxrB572WTxgZBSbp1I "
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800 break-all"
-            >
-              https://whatsapp.com/channel/0029VbAxrB572WTxgZBSbp1I
-            </a>
-          </p>
-          <p>
-            <span className="font-medium">LinkedIn Page:</span>
-            <br />
-            <a
-              href="https://www.linkedin.com/company/hr-posting-partner/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800 break-all"
-            >
-              https://www.linkedin.com/company/hr-posting-partner/
-            </a>
-          </p>
-          <p>
-            <span className="font-medium">For career and job seeking guidance:</span>
-            <br />
-            <a
-              href="https://whatsapp.com/channel/0029VbAxrB572WTxgZBSbp1I "
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800 break-all"
-            >
-              https://www.hrpostingpartner.com/blogs
-            </a>
-          </p>
+      <div className="rounded-[2rem] border border-gray-100 bg-white p-6 text-gray-700 shadow-[0_25px_60px_rgba(15,23,42,0.12)] md:p-8">
+        <div className="flex items-start gap-4">
+          <div>
+            <p className="text-base font-semibold tracking-tight text-gray-900">
+              Follow HRPP Platforms for Jobs
+            </p>
+            <p className="mt-1 text-sm text-gray-500 sm:text-base">
+              Stay updated with daily job postings and career guidance.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-[1.75rem] border border-gray-200 bg-gradient-to-b from-white to-gray-50/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] md:p-7">
+          <div className="space-y-7">
+            {platformGroups.map((group, index) => (
+              <div key={group.title}>
+                <div className="flex items-center gap-3">
+                  <div className="shrink-0 rounded-2xl bg-gray-50 p-2 shadow-sm ring-1 ring-gray-100">
+                    <group.icon
+                      className={`h-7 w-7 ${
+                        group.title === "Jobs WhatsApp Channels"
+                          ? "text-[#25D366]"
+                          : group.title === "LinkedIn Company Pages"
+                            ? "text-[#0A66C2]"
+                            : "text-[#FF0000]"
+                      }`}
+                    />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 sm:text-base">{group.title}</h3>
+                </div>
+
+                <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                  {group.links.map((link) => (
+                    <div
+                      key={`${group.title}-${link.label}`}
+                      className="rounded-2xl bg-white/90 p-3 text-center shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-gray-100"
+                    >
+                      <p className="text-xs font-semibold text-gray-900 sm:text-sm">{link.label}</p>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold transition sm:text-sm ${group.buttonClassName}`}
+                      >
+                        <span className="rounded-full bg-white/15 p-1">
+                          <group.icon className="h-5 w-5 shrink-0" />
+                        </span>
+                        <span>{group.accent}</span>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+
+                {index < platformGroups.length - 1 && (
+                  <div className="mt-7 border-t border-dashed border-gray-200" />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
