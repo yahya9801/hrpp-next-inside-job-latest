@@ -16,7 +16,7 @@ export const revalidate = 60;
 
 async function getJob(slug: string) {
   const res = await fetch(
-    `http://localhost:8000/api/jobs/${slug}`,
+    `https://admin.hrpostingpartner.com/api/jobs/${slug}`,
     {
       next: { revalidate: 60 },
     }
