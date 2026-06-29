@@ -272,7 +272,7 @@ export default async function Page({
         "border-[#0A66C2] bg-gradient-to-r from-[#2287e5] to-[#0A66C2] text-white shadow-[0_10px_20px_rgba(10,102,194,0.25)] hover:from-[#1d7cd4] hover:to-[#095cad]",
       links: [
         { label: "Main", href: "https://www.linkedin.com/company/hr-posting-partner/" },
-        { label: "Job Ads", href: "https://www.linkedin.com/company/hr-posting-partner/" },
+        { label: "Job Ads", href: "https://www.linkedin.com/company/hrpp-job-ads-pakistan/ " },
       ],
     },
     {
@@ -284,7 +284,7 @@ export default async function Page({
       links: [
         {
           label: "Main",
-          href: "https://youtube.com/playlist?list=PLG4_jlkQNY3c4e18HVMezltMtlgbk3_ty",
+          href: "https://www.youtube.com/@HRPostingPartner",
         },
       ],
     },
