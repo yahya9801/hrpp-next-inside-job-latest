@@ -284,7 +284,7 @@ export default async function Page({
       links: [
         {
           label: "Main",
-          href: "https://www.youtube.com/@HRPostingPartner",
+          href: "https://www.youtube.com/@HRPostingPartner/shorts",
         },
       ],
     },
