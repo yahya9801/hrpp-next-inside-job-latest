@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Linkedin, Phone, ChevronRight } from 'lucide-react';
+import { Youtube, Linkedin, Phone, ChevronRight } from 'lucide-react';
 
 type BlogCategory = {
   id: number;
@@ -97,17 +97,17 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white">HR Posting Partner</h3>
           </div>
           <p className="text-gray-300 text-sm leading-relaxed">
-            We are HR based marketing business providing Job Ads service along with marketing for other companies or businesses.
+            We are a modern job portal and hiring network built to connect employers with real talent across Pakistan.
           </p>
 
           <div className="flex space-x-4">
             <a
-              href="https://www.facebook.com/profile.php?id=100087877179793"
+              href="https://www.youtube.com/c/hrpartner/videos"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center border border-gray-600 hover:border-blue-500 transition-all"
+              className="w-10 h-10 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center border border-gray-600 hover:border-red-500 transition-all"
             >
-              <Facebook size={18} />
+              <Youtube size={18} />
             </a>
             <a
               href="https://www.linkedin.com/company/hr-posting-partner/"

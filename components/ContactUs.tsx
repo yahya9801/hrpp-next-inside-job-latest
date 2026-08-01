@@ -24,19 +24,6 @@ const ContactUs = () => (
         .
       </p>
 
-      <p>
-        Do you want to post a sponsored ad on our Whatsapp Channels and Facebook page? Whatsapp message us at:{" "}
-        <a
-          href="https://wa.me/923223379647"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 underline hover:text-blue-800"
-        >
-          +92 322 337 9647
-        </a>
-        .
-      </p>
-
       <p className="italic text-gray-600 text-sm">
         (Note: Please do not share with us your resumes and do not request us to send you job ads separately)
       </p>
