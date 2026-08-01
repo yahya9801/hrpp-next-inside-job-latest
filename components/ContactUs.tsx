@@ -12,7 +12,7 @@ const ContactUs = () => (
     {/* Main Content */}
     <div className="text-gray-800 space-y-4 text-base sm:text-lg">
       <p>
-        Are you a recruiter and want to post your job ad on our Whatsapp Channel and Facebook page? If you follow our terms and conditions of job ad, then Whatsapp message us at:{" "}
+        Are you a recruiter and want to post your job ad on our Platforms? If you follow our terms and conditions of job ad, then Whatsapp message us at:{" "}
         <a
           href="https://wa.me/923223379647"
           target="_blank"

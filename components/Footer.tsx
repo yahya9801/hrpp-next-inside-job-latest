@@ -102,7 +102,7 @@ export default function Footer() {
 
           <div className="flex space-x-4">
             <a
-              href="https://www.youtube.com/c/hrpartner/videos"
+              href="https://www.youtube.com/@HRPostingPartner"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center border border-gray-600 hover:border-red-500 transition-all"
