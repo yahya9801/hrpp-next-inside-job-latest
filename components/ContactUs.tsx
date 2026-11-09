@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const ContactUs = () => (
@@ -10,22 +11,39 @@ const ContactUs = () => (
     </div>
 
     {/* Main Content */}
-    <div className="text-gray-800 space-y-4 text-base sm:text-lg">
-      <p>
-        Are you a recruiter and want to post your job ad on our Platforms? If you follow our terms and conditions of job ad, then Whatsapp message us at:{" "}
-        <a
-          href="https://wa.me/923223379647"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 underline hover:text-blue-800"
-        >
-          +92 322 337 9647
-        </a>
-        .
-      </p>
+    <div className="text-gray-800 space-y-5 text-base sm:text-lg">
+      {/* Recruiters / Employers */}
+      <div>
+        <p>
+          <strong>Recruiters/Employers:</strong> Want to post a job
+          ad on our platforms? Contact us for our paid job
+          posting service.
+        </p>
 
-      <p className="italic text-gray-600 text-sm">
-        (Note: Please do not share with us your resumes and do not request us to send you job ads separately)
+        <p className="mt-3">
+          <strong>Contact:</strong>{" "}
+          <a
+            href="mailto:jobads@hrpostingpartner.com"
+            className="text-blue-600 underline hover:text-blue-800 break-words"
+          >
+            jobads@hrpostingpartner.com
+          </a>
+        </p>
+      </div>
+
+      {/* Job Seekers */}
+      <div>
+        <p>
+          <strong>Job Seekers:</strong> Please contact us only
+          to report fake/scam job ads so we can take action.
+        </p>
+      </div>
+
+      {/* Important Notice */}
+      <p className="italic text-gray-600 text-sm sm:text-base">
+        <strong>Important:</strong> Job Seekers are requested
+        NOT to send us their resumes, as HRPP does not
+        collect resumes.
       </p>
     </div>
   </section>

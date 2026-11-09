@@ -682,31 +682,56 @@ export default async function Page({
         </div>
       </div>
 
-      <div className="rounded-3xl border border-gray-100 bg-white p-6 text-gray-700 shadow-[0_25px_60px_rgba(15,23,42,0.12)] space-y-2">
-        <p className="text-base font-semibold text-gray-900">Dear Recruiter, </p><p>
-Want your job ad here? (Paid)</p>
-        <p>
-          Contact:{" "}
-          <a
-            href="https://wa.me/923223379647"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            +92 322 337 9647
-          </a>
-        </p>
-        <p>
-          Follow our{" "}
-          <a href="/terms-and-conditions" className="text-blue-600 underline">
-            terms and conditions
-          </a>
-          .
-        </p>
-        <p className="text-sm">
-          Note: Do not send your resume (Job Seekers) nor call us.
-        </p>
-      </div>
+    
+    <div className="rounded-3xl border border-gray-100 bg-white p-6 text-gray-700 shadow-[0_25px_60px_rgba(15,23,42,0.12)] space-y-3">
+    {/* Recruiters / Employers */}
+    <p className="text-base font-semibold text-gray-900">
+      Dear Recruiters/Employers,
+    </p>
+
+    <p>
+      Want your job ad posted on our platform? Contact us for our
+      paid posting service.
+    </p>
+
+    <p>
+      <strong>Contact:</strong>{" "}
+      <a
+        href="mailto:jobads@hrpostingpartner.com"
+        className="text-blue-600 underline hover:text-blue-800 break-words"
+      >
+        jobads@hrpostingpartner.com
+      </a>
+    </p>
+
+    {/* Job Seekers */}
+    <div className="border-t border-gray-200 pt-4 mt-4 space-y-3">
+      <p className="text-base font-semibold text-gray-900">
+        Job Seekers:
+      </p>
+
+      <p>
+        Contact us only to report fake/scam job ads so we can
+        take action.
+      </p>
+
+      <p className="text-sm text-gray-600">
+        Please do not send us your resume. HRPP does not collect
+        resumes.
+      </p>
+
+      <p>
+        Having trouble applying? Follow the steps mentioned above.
+      </p>
+
+      <p className="text-sm text-gray-600">
+        If an application link or email isn't working, please
+        ignore the post. Our clients may occasionally face
+        technical difficulties.
+      </p>
+    </div>
+    </div>
+
     </div>
       {sliderSections.length > 0 && (
         <div className="mt-12 space-y-8">
