@@ -171,31 +171,6 @@ export default function JobsLayout({
             )}
 
             {/* Ad Box Always Visible */}
-            <div className="border p-3 text-xs text-gray-700 rounded">
-              <p>Want your job ad here?</p>
-              <p className="mt-2">
-                Contact:{" "}
-                <a
-                  href="https://wa.me/923223379647"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline hover:text-blue-800"
-                >
-                  +92 322 337 9647
-                </a>
-              </p>
-              <p>
-                Follow our{" "}
-                <a
-                  href="/terms-and-conditions"
-                  className=" text-blue-600 underline"
-                >
-                  terms and conditions
-                </a>
-                .
-              </p>
-              <p className="mt-2">Note: Do not send your resume or contact us by phone.</p>
-            </div>
 
             <div className="mt-6 p-4  border  rounded-lg shadow-sm text-gray-700 break-words">
               <p className="font-semibold mb-2">
@@ -216,19 +191,6 @@ export default function JobsLayout({
               </p>
 
               <p className="mt-2">
-                <span className="font-medium">Facebook Page:</span>
-                <br />
-                <a
-                  href="https://www.facebook.com/profile.php?id=100087877179793"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline hover:text-blue-800 break-all"
-                >
-                  https://www.facebook.com/profile.php?id=100087877179793
-                </a>
-              </p>
-
-              <p className="mt-2">
                 <span className="font-medium">LinkedIn Page:</span>
                 <br />
                 <a
@@ -238,6 +200,19 @@ export default function JobsLayout({
                   className="text-blue-600 underline hover:text-blue-800 break-all"
                 >
                   https://www.linkedin.com/company/hr-posting-partner/
+                </a>
+              </p>
+
+               <p className="mt-2">
+                <span className="font-medium">Youtube Channel:</span>
+                <br />
+                <a
+                  href="https://www.youtube.com/@HRPostingPartner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline hover:text-blue-800 break-all"
+                >
+                  https://www.youtube.com/@HRPostingPartner
                 </a>
               </p>
             </div>
